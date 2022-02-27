@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -17,39 +16,49 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zKI-tG-Ofx">
-                                <rect key="frame" x="119.5" y="432.5" width="175" height="31"/>
-                                <color key="backgroundColor" systemColor="systemPinkColor"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NEg-1M-Gif" customClass="Viewo" customModule="SheetPresentationController" customModuleProvider="target">
+                                <rect key="frame" x="61" y="393.5" width="292" height="109"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zKI-tG-Ofx">
+                                        <rect key="frame" x="0.0" y="0.0" width="292" height="109"/>
+                                        <color key="tintColor" red="0.015686274510000001" green="0.18823529410000001" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title=" "/>
+                                        <connections>
+                                            <action selector="button:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nXo-pb-Ldu"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="31" id="7Y6-7a-ceM"/>
-                                    <constraint firstAttribute="width" constant="175" id="aEi-FM-1zm"/>
+                                    <constraint firstAttribute="height" constant="109" id="McW-wM-YX5"/>
+                                    <constraint firstAttribute="width" constant="292" id="UkE-bR-Goq"/>
+                                    <constraint firstItem="zKI-tG-Ofx" firstAttribute="top" secondItem="NEg-1M-Gif" secondAttribute="top" id="Vqh-MM-rXb"/>
+                                    <constraint firstAttribute="bottom" secondItem="zKI-tG-Ofx" secondAttribute="bottom" id="YDn-PH-Zgz"/>
+                                    <constraint firstItem="zKI-tG-Ofx" firstAttribute="leading" secondItem="NEg-1M-Gif" secondAttribute="leading" id="fj1-HD-6c5"/>
+                                    <constraint firstAttribute="trailing" secondItem="zKI-tG-Ofx" secondAttribute="trailing" id="grk-YO-phu"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                                <connections>
-                                    <action selector="button:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nXo-pb-Ldu"/>
-                                </connections>
-                            </button>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="zKI-tG-Ofx" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="XSA-am-6jd"/>
-                            <constraint firstItem="zKI-tG-Ofx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zkY-KE-j4e"/>
+                            <constraint firstItem="NEg-1M-Gif" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ERb-7e-fBa"/>
+                            <constraint firstItem="NEg-1M-Gif" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="sZa-Gc-4c5"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="buttonArched" destination="zKI-tG-Ofx" id="tps-Bw-av0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="243" y="431"/>
+            <point key="canvasLocation" x="242.0289855072464" y="430.58035714285711"/>
         </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemPinkColor">
-            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

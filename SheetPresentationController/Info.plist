@@ -21,5 +21,12 @@
 			</array>
 		</dict>
 	</dict>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>alluban-alfakher</string>
+		</dict>
+	</array>
 </dict>
 </plist>
